@@ -48,7 +48,7 @@ function App() {
             <button type="submit">Search</button>
           </span>
           <p>Definition:</p>
-          {submitted && <p>{definition}</p>}
+          {submitted && <p data-testid="definition">{definition}</p>}
         </form>
       </div>
     </div>
