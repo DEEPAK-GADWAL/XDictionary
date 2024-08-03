@@ -18,6 +18,10 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    if (input.trim() === "") {
+      setDefinition("Word not found in the dictionary.");
+      return;
+    }
     const result = data.find(
       (val) => val.word.toLowerCase() === input.toLowerCase()
     );
