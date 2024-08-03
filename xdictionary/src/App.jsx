@@ -20,7 +20,7 @@ function App() {
     const result = data.find(
       (val) => val.word.toLowerCase() === input.toLowerCase()
     );
-    setDefination(result ? result.meaning : "");
+    setDefination(result ? result.meaning : "Word not found in the dictionary");
   };
   return (
     <div>
@@ -40,7 +40,8 @@ function App() {
             <button type="submit">search</button>{" "}
           </span>
           <p>Defination:</p>
-          <p>{defination}</p>
+
+          <p>{input ? defination : ""}</p>
         </form>
       </div>
     </div>
